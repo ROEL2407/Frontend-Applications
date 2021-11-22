@@ -20,7 +20,7 @@ In this repository I've made a visualization of data fetched from the PokeAPI us
 ## Installation
 Clone this repository to your own device:
 ```console
-git clone https://github.com/ROEL2407/Funcfrontend-data.git
+git clone https://github.com/ROEL2407/Frontend-Applications.git
 ```
 ## Rubric
 For this assignment I'm being rated on the folllowing points:
