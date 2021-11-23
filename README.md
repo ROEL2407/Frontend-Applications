@@ -26,6 +26,14 @@ git clone https://github.com/ROEL2407/Frontend-Applications.git
 For this assignment I'm being rated on the folllowing points:
 <img src="https://github.com/ROEL2407/frontend-data/blob/main/images/rubric2.PNG">
 
+## Commits
+In this repo I will commit my work. To make this more visible for myself and others I've added little headers to the commit titles:
+* Created = a file is created
+* Added =  added a piece of code
+* Updated = updated a file or piece of code
+* Remove =  removed a piece of code
+* Delete = deleted a file
+
 ## Resources
 ### Credits
 * Our teachers at the Tech Track from CMD (specificly robert for coping with my many questions).
