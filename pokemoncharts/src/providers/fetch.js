@@ -1,4 +1,6 @@
+import statCounter from "./statCounter";
 function Fetch() {
+    return new Promise((resolve) => {
     function starters() {
         // Fetch init API
         fetch("https://pokeapi.co/api/v2/pokemon?limit=9&offset=0")
@@ -7,8 +9,6 @@ function Fetch() {
     }
 
     function getPokemonData(data) {
-        // let urls = [];
-        let promises = [];
         let pokemonArray = [];
 
         const promises = data.results
@@ -25,10 +25,18 @@ function Fetch() {
                     type: pokemon.types[0].type.name
                 });
             });
-            countStats(pokemonArray);
+            resolve(pokemonArray);
         });
     }
+    function getPokemon(url) {
+        // return every fetch
+        return fetch(url)
+            .then(response => response.json())
+            .then(data => data)
+    }
     starters();
+
+    })
 }
 
 export default Fetch;
