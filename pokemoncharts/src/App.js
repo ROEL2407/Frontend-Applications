@@ -6,7 +6,9 @@ import Fetch from './providers/fetch';
 import { useEffect, useState } from 'react';
 
 function App() {
+  // set default of fetch to null
   const [json, setJson] = useState(null);
+  // get data async
   useEffect(() => {
      Fetch().then(data => setJson(data));
   })
