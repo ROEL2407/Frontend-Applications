@@ -3,7 +3,7 @@ import React from "react";
 import * as d3 from "d3";
 import './App.css';
 
-function Bar(starterMons) {
+function BarChart({ data }) {
     const margin = {
         top: 40,
         bottom: 10,
@@ -190,4 +190,4 @@ function Bar(starterMons) {
     );
 }
 
-export default Bar;
+export default BarChart;

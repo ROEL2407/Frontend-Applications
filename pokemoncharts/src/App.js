@@ -31,6 +31,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <BarChart data={json} />
     </div>
   );
 }
