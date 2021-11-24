@@ -1,4 +1,3 @@
-import statCounter from "./statCounter";
 function Fetch() {
     return new Promise((resolve) => {
     function starters() {
