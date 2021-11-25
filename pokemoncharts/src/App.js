@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import React from 'react';
 import Fetch from './providers/fetch';
-//import statCounter from './providers/statCounter';
+import BarChart from './charts/BarChart';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   const [json, setJson] = useState(null);
   // get data async
   useEffect(() => {
-     Fetch().then(data => setJson(data));
+    Fetch().then(data => setJson(data));
   })
   return (
     <div className="App">
