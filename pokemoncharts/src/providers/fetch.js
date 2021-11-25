@@ -1,39 +1,44 @@
+import CalculateStatTotal from "./CalculateStatTotal";
+
 function Fetch() {
     return new Promise((resolve) => {
-    function starters() {
-        // Fetch init API
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=9&offset=0")
-            .then(response => response.json())
-            .then(data => getPokemonData(data))
-    }
+        function starters() {
+            // Fetch init API
+            fetch("https://pokeapi.co/api/v2/pokemon?limit=9&offset=0")
+                .then(response => response.json())
+                .then(data => getPokemonData(data))
+        }
 
-    function getPokemonData(data) {
-        let pokemonArray = [];
+        function getPokemonData(data) {
+            let pokemonArray = [];
 
-        const promises = data.results
-            .map(result => result.url)
-            .map(url => getPokemon(url));
+            const promises = data.results
+                .map(result => result.url)
+                .map(url => getPokemon(url));
 
-        // Resolve all promises
-        Promise.all(promises).then(results => {
-            // For each pokemon in results push the pokemon to the array pokemonArray
-            results.forEach(pokemon => {
-                pokemonArray.push({
-                    naam: pokemon.name,
-                    stats: pokemon.stats,
-                    type: pokemon.types[0].type.name
+            // Resolve all promises
+            Promise.all(promises).then(results => {
+                // For each pokemon in results push the pokemon to the array pokemonArray
+                results.forEach(pokemon => {
+                    pokemonArray.push({
+                        naam: pokemon.name,
+                        stats: pokemon.stats,
+                        type: pokemon.types[0].type.name
+                    });
                 });
+
+                CalculateStatTotal(pokemonArray)
+                    .then(resolve)
             });
-            resolve(pokemonArray);
-        });
-    }
-    function getPokemon(url) {
-        // return every fetch
-        return fetch(url)
-            .then(response => response.json())
-            .then(data => data)
-    }
-    starters();
+        }
+
+        function getPokemon(url) {
+            // return every fetch
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => data);
+        }
+        starters();
 
     })
 }
