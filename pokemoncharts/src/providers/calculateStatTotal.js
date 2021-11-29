@@ -35,7 +35,6 @@ function CalculateStatTotal(pokemonArray = []) {
                 evo: evo
             });
         });
-        console.log(starterMons);
         resolve(starterMons);
     })
 }
