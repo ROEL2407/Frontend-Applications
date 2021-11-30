@@ -1,4 +1,4 @@
-import CalculateStatTotal from "./CalculateStatTotal";
+import CalculateStatTotal from "../components/CalculateStatTotal";
 
 function Fetch() {
     return new Promise((resolve) => {
