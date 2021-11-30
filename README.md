@@ -8,6 +8,7 @@ Assignment<br />
 Project<br />
 [Installation](https://github.com/ROEL2407/frontend-data#installation)<br />
 [Rubric](https://github.com/ROEL2407/frontend-data#rubric)<br />
+[Commits](https://github.com/ROEL2407/Frontend-Applications/blob/main/README.md#commits)<br />
 [Resources](https://github.com/ROEL2407/frontend-data#resources)<br />
 [License](https://github.com/ROEL2407/frontend-data#license)
 
