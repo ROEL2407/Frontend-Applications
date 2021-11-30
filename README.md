@@ -22,6 +22,22 @@ Clone this repository to your own device:
 ```console
 git clone https://github.com/ROEL2407/Frontend-Applications.git
 ```
+
+After that, use the following command to go to the app:
+```
+cd ./pokemoncharts
+```  
+
+Use the following command to install the packages:
+```
+npm install
+```
+
+Then, use the following command to start the app locally in your browser:
+```
+npm start
+```
+
 ## Rubric
 For this assignment I'm being rated on the folllowing points:
 <img src="https://github.com/ROEL2407/frontend-data/blob/main/images/rubric2.PNG">
