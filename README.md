@@ -52,7 +52,7 @@ In this repo I will commit my work. To make this more visible for myself and oth
 
 ## Resources
 ### Credits
-* Our teachers at the Tech Track from CMD (specificly robert for coping with my many questions).
+* Our teachers at the Tech Track from CMD (specificly Angelo for coping with my many questions).
 * My support group.
 * My fellow students who've helped me resolving some problems and learning me new types of tricks.
 * Stackoverflow for giving me the answer that I could tweak or that helped me understand my problem in the code better.  
