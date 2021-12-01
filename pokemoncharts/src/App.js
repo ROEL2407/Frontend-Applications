@@ -1,8 +1,10 @@
 
 import './App.scss';
 import React from 'react';
+import { Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
 import Fetch from './providers/fetch';
-import BarChart from './charts/BarChart';
+import Visualization from "./components/Visualization";
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -19,22 +21,12 @@ function App() {
   }
   return (
     <div className="App">
-    <h2>What are the biggest base stats of the gen 1 starter Pokémon?</h2>
-    <div id="filters">
-        <strong>Filter:</strong>
-        
-        <label><input type="radio" name="filters" value="1" id="filter-1-only" class="filters" />First evolution</label>
-        <label><input type="radio" name="filters" value="1" id="filter-2-only" class="filters" />Second
-            evolution</label>
-        <label><input type="radio" name="filters" value="1" id="filter-3-only" class="filters" />Third evolution</label>
-        <label><input type="radio" name="filters" value="1" id="filter-all" class="filters" />All evolutions</label>
-    </div>
-    <div class="hidden" id="toolTip">
-        <p id="type"></p>
-        <p id="value"></p>
-    </div>
-
-      {json && <BarChart data={json} />}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/visualization" element={<Visualization />}  data={json}/>
+    </Routes>
+    
+    <Link to="/">home</Link> <Link to="/visualization">Visualization</Link>
     </div>
   );
 }
