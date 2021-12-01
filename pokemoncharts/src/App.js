@@ -7,14 +7,14 @@ import Visualization from "./components/Visualization";
 function App() {
   return (
     <div className="App">
-    <div className="nav">
-      <Link to="/">Home</Link>
-      <Link to="/visualization">Visualization</Link>
-    </div>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/visualization" element={<Visualization />}/>
-    </Routes>
+      <div className="nav">
+        <Link to="/">Home</Link>
+        <Link to="/visualization">Visualization</Link>
+      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/visualization" element={<Visualization />}/>
+      </Routes>
     </div>
   );
 }
