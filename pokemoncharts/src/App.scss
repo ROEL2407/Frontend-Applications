@@ -71,3 +71,35 @@ text-align: center;
 label {
   margin-right: 10px;
 }
+
+.nav {
+  width: 100%;
+  background-color: darkgray;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 15%;
+    height: 10vh;
+    padding: 0px 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    border-right: 1px solid black;
+
+    &:hover {
+      text-decoration: underline;
+      background-color: black;
+      color: white;
+    }
+    &:first-of-type {
+      border-left: 1px solid black;
+    }
+  }
+}
